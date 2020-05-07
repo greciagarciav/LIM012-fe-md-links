@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 const Validate = (arrObjects) => {
-  const validatedLinks = arrObjects.map((object) => new Promise((resolve) => {
+  const arrPromises = arrObjects.map((object) => new Promise((resolve) => {
     const objValidated = { ...object };
     fetch(object.href)
       .then((res) => {
@@ -21,7 +21,7 @@ const Validate = (arrObjects) => {
         resolve(objValidated);
       });
   }));
-  return Promise.all(validatedLinks);
+  return Promise.all(arrPromises);
 };
 
 const Stats = (arrObj) => {
