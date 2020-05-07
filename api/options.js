@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const ValidateLinks = (arrObjects) => {
+const Validate = (arrObjects) => {
   const validatedLinks = arrObjects.map((object) => new Promise((resolve) => {
     const objValidated = { ...object };
     fetch(object.href)
@@ -24,6 +24,21 @@ const ValidateLinks = (arrObjects) => {
   return Promise.all(validatedLinks);
 };
 
+const Stats = (arrObj) => {
+  const total = arrObj.length;
+  const unique = new Set(arrObj.map((object) => object.href));
+  return `Total:${total} Unique:${unique.size}`;
+};
+
+const StatsAndValidate = (arrObj) => {
+  const total = arrObj.length;
+  const unique = new Set(arrObj.map((object) => object.href));
+  const brokenLinks = new Set(arrObj.map((object) => object.status !== 200 || object.status === ''));
+  return `Total:${total} Unique:${unique.size} Broken:${brokenLinks.size}`;
+};
+
 module.exports = {
-  ValidateLinks,
+  Validate,
+  Stats,
+  StatsAndValidate,
 };
