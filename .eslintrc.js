@@ -17,6 +17,7 @@ module.exports = {
   },
   rules: {
     "linebreak-style": 0,
-    "no-lonely-if": 0
+    "no-lonely-if": 0,
+    // "max-len": 0
   },
 };
