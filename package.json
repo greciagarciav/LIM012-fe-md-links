@@ -4,10 +4,11 @@
   "description": "[Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado\r ligero muy popular entre developers. Es usado en muchísimas plataformas que\r manejan texto plano (GitHub, foros, blogs, ...), y es muy común\r encontrar varios archivos en ese formato en cualquier tipo de repositorio\r (empezando por el tradicional `README.md`).",
   "main": "index.js",
   "directories": {
+    "api": "api",
     "test": "test"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,17 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.0.1",
+    "babel-preset-es2015": "^6.24.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
-    "jest": "^25.4.0"
+    "jest": "^25.5.4"
   }
 }
