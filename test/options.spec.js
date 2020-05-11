@@ -77,11 +77,11 @@ const arrObjValidated = [
   },
 ];
 describe('Validate status of link of each object of an array', () => {
-  it('should return an array of promises of validated links with properties file, href, text, status and ok', () => {
-    return optionFunctions.Validate(arrObj).then((data) => {
+  it('should return an array of promises of validated links with properties file, href, text, status and ok', (done) => optionFunctions.Validate(arrObj)
+    .then((data) => {
       expect(data).toEqual(arrObjValidated);
-    });
-  });
+      done();
+    }));
 });
 
 const statsLink = 'Total:9 Unique:9';
