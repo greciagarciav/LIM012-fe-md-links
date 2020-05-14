@@ -1,10 +1,9 @@
 {
-  "name": "lim012-fe-md-links",
+  "name": "@greciagarciav/md-links",
   "version": "1.0.0",
-  "description": "[Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado\r ligero muy popular entre developers. Es usado en muchísimas plataformas que\r manejan texto plano (GitHub, foros, blogs, ...), y es muy común\r encontrar varios archivos en ese formato en cualquier tipo de repositorio\r (empezando por el tradicional `README.md`).",
-  "main": "index.js",
+  "description": "Validate and get statistics of links of markdown files",
+  "main": "lib/api/mdLinks.js",
   "directories": {
-    "api": "api",
     "test": "test"
   },
   "scripts": {
@@ -38,5 +37,13 @@
     "eslint-plugin-import": "^2.20.2",
     "fetch-mock": "^9.5.1",
     "jest": "^25.5.4"
-  }
+  },
+  "bin":{
+    "md-links": "lib/cli.js"
+  },
+  "keywords": [
+    "javascript",
+    "jest",
+    "mdlinks"
+  ]
 }
