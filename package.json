@@ -38,12 +38,12 @@
     "fetch-mock": "^9.5.1",
     "jest": "^25.5.4"
   },
-  "bin":{
+  "bin": {
     "md-links": "lib/cli.js"
   },
   "keywords": [
     "javascript",
     "jest",
-    "mdlinks"
+    "md-links"
   ]
 }
