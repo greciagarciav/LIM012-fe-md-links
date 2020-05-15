@@ -1,3 +1,4 @@
+const fetchMock = require('../__mocks__/node-fetch.js');
 const optionFunctions = require('../lib/api/options');
 
 const arrObj = [
@@ -77,6 +78,19 @@ const arrObjValidated = [
   },
 ];
 describe('Validate status of link of each object of an array', () => {
+  fetchMock
+    .mock('https://github.com/workshopper/learnyounode', 200)
+    .mock('https://github.com/workshopper/how-to-npm', 200)
+    .mock('https://github.com/stevekane/promise-it-wont-hurt', 200)
+    .mock('https://nodejs.org/en/', 200)
+    .mock('https://nodejs.org/api/fs.html', 200)
+    .mock('https://nodejs.org/api/path.html', 200)
+    .mock('https://nodejs.org/', 200)
+    .mock('http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-paragenerar-numeros-de-tarjetas-de-credito.html', 404)
+    .mock('CommonJS', () => {
+    // eslint-disable-next-line no-throw-literal
+      throw 'error';
+    });
   it('should return an array of promises of validated links with properties file, href, text, status and ok', (done) => optionFunctions.Validate(arrObj)
     .then((data) => {
       expect(data).toEqual(arrObjValidated);
