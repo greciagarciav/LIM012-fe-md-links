@@ -12,6 +12,7 @@ const arrObj = [
   { file: 'dir-test/subdir-test/', href: 'http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-paragenerar-numeros-de-tarjetas-de-credito.html', text: 'http.get' },
   { file: 'dir-test/subdir-test/', href: 'https://nodejs.org/', text: 'Node.js' },
 ];
+
 const arrObjValidated = [
   {
     file: 'dir-test/subdir-test/',
@@ -77,6 +78,7 @@ const arrObjValidated = [
     ok: 'OK',
   },
 ];
+
 describe('Validate status of link of each object of an array', () => {
   fetchMock
     .mock('https://github.com/workshopper/learnyounode', 200)
