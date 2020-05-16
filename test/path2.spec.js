@@ -29,6 +29,7 @@ describe('2.Check if a path is a directory', () => {
 });
 
 const arrPathAllFiles = [
+  'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test2\\fourth.txt',
   'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test2\\subdir-test\\first.md',
   'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test2\\subdir-test\\second.md',
   'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test2\\subdir-test\\third.txt',
