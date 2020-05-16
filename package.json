@@ -7,6 +7,8 @@
     "test": "test"
   },
   "scripts": {
+    "build": "babel src -d lib",
+    "eslint": "eslint --ext .js lib/ test/",
     "test": "jest --verbose --coverage"
   },
   "repository": {
@@ -14,7 +16,7 @@
     "url": "git+https://github.com/greciagarciav/LIM012-fe-md-links.git"
   },
   "author": "Grecia Garcia",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/greciagarciav/LIM012-fe-md-links/issues"
   },
@@ -39,7 +41,7 @@
     "jest": "^25.5.4"
   },
   "bin": {
-    "md-links": "lib/cli.js"
+    "md-links": "./lib/cli.js"
   },
   "keywords": [
     "javascript",
