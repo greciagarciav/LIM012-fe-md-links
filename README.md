@@ -1,3 +1,25 @@
+![md-links](https://user-images.githubusercontent.com/51206642/82133217-de6cd700-97ae-11ea-8086-059b1156ad19.JPG)
+
+![Build Status](https://img.shields.io/badge/nodeJs-100%25-blue) ![Coverage Status](https://img.shields.io/badge/coverage-100%25-green) ![npm dependents](https://img.shields.io/badge/dependencias-3-pink) ![version](https://img.shields.io/badge/version-1.00-orange) ![milestones](https://img.shields.io/badge/milestones-4-yellowgreen) ![issues](https://img.shields.io/badge/issues-16%20closed-ff69b4)
+
+md-links es una librería que valida links y obtiene estadísticas de todos los archivos markdown .md de una ruta específica. Esta implementada en Javascript y se ejecuta con Node.js.
+
+Para empezar a crear esta librería tomé en cuenta lo siguiente:
+- [Diagrama de flujo](https://drive.google.com/file/d/1zjaBl69GMhtTAixL-nYmKPPLUjpdgMyN/view?usp=sharing)
+- [Planificación](https://github.com/greciagarciav/LIM012-fe-md-links/projects/1)
+
+## Documentación técnica
+
+
+
+## Guía de uso
+
+
+
+## Instalación
+
+
+
 # Markdown Links
 
 ## Preámbulo
@@ -248,33 +270,33 @@ pendientes de tu proyecto anterior.
 
 ### Javascript
 - [ ] Uso de callbacks
-- [ ] Consumo de Promesas
-- [ ] Creacion de Promesas
-- [ ] Modulos de Js
-- [ ] Recursión
+- [x] Consumo de Promesas
+- [x] Creacion de Promesas
+- [x] Modulos de Js
+- [x] Recursión
 
 ### Node
-- [ ] Sistema de archivos
-- [ ] package.json
-- [ ] crear modules
-- [ ] Instalar y usar modules
-- [ ] npm scripts
-- [ ] CLI (Command Line Interface - Interfaz de Línea de Comando)
+- [x] Sistema de archivos
+- [x] package.json
+- [x] crear modules
+- [x] Instalar y usar modules
+- [x] npm scripts
+- [x] CLI (Command Line Interface - Interfaz de Línea de Comando)
 
 ### Testing
-- [ ] Testeo de tus funciones
-- [ ] Testeo asíncrono
-- [ ] Uso de librerias de Mock
-- [ ] Mocks manuales
+- [x] Testeo de tus funciones
+- [x] Testeo asíncrono
+- [x] Uso de librerias de Mock
+- [x] Mocks manuales
 - [ ] Testeo para multiples Sistemas Operativos
 
 ### Git y Github
-- [ ] Organización en Github
+- [x] Organización en Github
 
 ### Buenas prácticas de desarrollo
-- [ ] Modularización
-- [ ] Nomenclatura / Semántica
-- [ ] Linting
+- [x] Modularización
+- [x] Nomenclatura / Semántica
+- [x] Linting
 
 ***
 
