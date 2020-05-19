@@ -18,7 +18,13 @@ Para empezar a crear esta librería tomé en cuenta lo siguiente:
 
 ## Instalación
 
-
+![--stats --validate o --validate --stats](https://user-images.githubusercontent.com/51206642/82266011-223a1a80-992e-11ea-84ad-65757f801154.JPG)
+![no valid commands](https://user-images.githubusercontent.com/51206642/82266450-58c46500-992f-11ea-9abc-6e49c33f9dd4.JPG)
+![ruta no válida](https://user-images.githubusercontent.com/51206642/82266068-439b0680-992e-11ea-91cd-50fd63f3f1fa.JPG)
+![--help](https://user-images.githubusercontent.com/51206642/82266074-485fba80-992e-11ea-9424-b9fd20768364.JPG)
+![--stats o --stats --validate](https://user-images.githubusercontent.com/51206642/82266148-84931b00-992e-11ea-89bb-4eb2afaacfed.JPG)
+![no options](https://user-images.githubusercontent.com/51206642/82266189-a391ad00-992e-11ea-94dc-88f6b0eb7fd9.JPG)
+![--validate](https://user-images.githubusercontent.com/51206642/82266200-aa202480-992e-11ea-813a-6a8d178460d8.JPG)
 
 # Markdown Links
 
