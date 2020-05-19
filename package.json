@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/greciagarciav/LIM012-fe-md-links#readme",
   "dependencies": {
+    "chalk": "^4.0.0",
     "commander": "^5.1.0",
     "node-fetch": "^2.6.0"
   },
