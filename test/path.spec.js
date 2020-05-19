@@ -96,7 +96,7 @@ describe('Get an object with properties of each link', () => {
 
 const arrObjLinksFiles = [
   { links: ['[learnyounode](https://github.com/workshopper/learnyounode)', '[how-to-npm](https://github.com/workshopper/how-to-npm)', '[promise-it-wont-hurt](https://github.com/stevekane/promise-it-wont-hurt)'], userPath: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\fifth.md' },
-  { links: ['[Node.js](https://nodejs.org/en/)', '[módulos (CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html)', '[file system](https://nodejs.org/api/fs.html)', '[path](https://nodejs.org/api/path.html)', '[http.get](http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-paragenerar-numeros-de-tarjetas-de-credito.html)'], userPath: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\seventh.md' },
+  { links: ['[Node.js](https://nodejs.org/en/)', '[módulos (CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html)', '[file system](https://nodejs.org/api/fs.html)', '[path](https://nodejs.org/api/path.html)', '[http.get](http://www.quobit.mx/asi-funciona-el-algoritmo)'], userPath: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\seventh.md' },
   { links: ['[Node.js](https://nodejs.org/)'], userPath: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\sixth.md' },
 ];
 describe('Get an array of objects of all links in a md file, each object has all links and the absolute path properties of the file', () => {
@@ -116,7 +116,7 @@ const arrObj = [
   { file: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\seventh.md', href: 'CommonJS', text: 'módulos (CommonJS)' },
   { file: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\seventh.md', href: 'https://nodejs.org/api/fs.html', text: 'file system' },
   { file: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\seventh.md', href: 'https://nodejs.org/api/path.html', text: 'path' },
-  { file: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\seventh.md', href: 'http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-paragenerar-numeros-de-tarjetas-de-credito.html', text: 'http.get' },
+  { file: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\seventh.md', href: 'http://www.quobit.mx/asi-funciona-el-algoritmo', text: 'http.get' },
   { file: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test\\subdir-test\\sub-sub-dir\\sixth.md', href: 'https://nodejs.org/', text: 'Node.js' },
 ];
 describe('Get an array of objects where each object is a link with the file, href and text properties', () => {

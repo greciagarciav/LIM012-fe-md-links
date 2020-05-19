@@ -1,3 +1,4 @@
+const chalk = require('chalk');
 const fetchMock = require('../__mocks__/node-fetch.js');
 const optionFunctions = require('../lib/api/options');
 
@@ -9,7 +10,7 @@ const arrObj = [
   { file: 'dir-test/subdir-test/', href: 'CommonJS', text: 'módulos (CommonJS)' },
   { file: 'dir-test/subdir-test/', href: 'https://nodejs.org/api/fs.html', text: 'file system' },
   { file: 'dir-test/subdir-test/', href: 'https://nodejs.org/api/path.html', text: 'path' },
-  { file: 'dir-test/subdir-test/', href: 'http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-paragenerar-numeros-de-tarjetas-de-credito.html', text: 'http.get' },
+  { file: 'dir-test/subdir-test/', href: 'http://www.quobit.mx/asi-funciona-el-algoritmo', text: 'http.get' },
   { file: 'dir-test/subdir-test/', href: 'https://nodejs.org/', text: 'Node.js' },
 ];
 
@@ -46,7 +47,7 @@ const arrObjValidated = [
     file: 'dir-test/subdir-test/',
     href: 'CommonJS',
     text: 'módulos (CommonJS)',
-    status: '',
+    status: 'error',
     ok: 'link does not exist',
   },
   {
@@ -65,7 +66,7 @@ const arrObjValidated = [
   },
   {
     file: 'dir-test/subdir-test/',
-    href: 'http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-paragenerar-numeros-de-tarjetas-de-credito.html',
+    href: 'http://www.quobit.mx/asi-funciona-el-algoritmo',
     text: 'http.get',
     status: 404,
     ok: 'Not Found',
@@ -88,7 +89,7 @@ describe('Validate status of link of each object of an array', () => {
     .mock('https://nodejs.org/api/fs.html', 200)
     .mock('https://nodejs.org/api/path.html', 200)
     .mock('https://nodejs.org/', 200)
-    .mock('http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-paragenerar-numeros-de-tarjetas-de-credito.html', 404)
+    .mock('http://www.quobit.mx/asi-funciona-el-algoritmo', 404)
     .mock('CommonJS', () => {
     // eslint-disable-next-line no-throw-literal
       throw 'error';
@@ -100,14 +101,14 @@ describe('Validate status of link of each object of an array', () => {
     }));
 });
 
-const statsLink = 'Total:9 Unique:9';
+const statsLink = `${chalk.cyanBright.bold('Total:')} ${chalk.white.bold('9')} \n${chalk.cyanBright.bold('Unique:')} ${chalk.white.bold('9')}`;
 describe('Get statistis of total and unique links of an ', () => {
   it('should return an array of links from all md files', () => {
     expect(optionFunctions.Stats(arrObjValidated)).toEqual(statsLink);
   });
 });
 
-const statsValidatedLinks = 'Total:9 Unique:9 Broken:2';
+const statsValidatedLinks = `${chalk.cyanBright.bold('Total:')} ${chalk.white.bold('9')} \n${chalk.cyanBright.bold('Unique:')} ${chalk.white.bold('9')} \n${chalk.cyanBright.bold('Broken:')} ${chalk.white.bold('2')}`;
 describe('Get an array of objects', () => {
   it('should return an array of objects where an object represent a link', () => {
     expect(optionFunctions.StatsAndValidate(arrObjValidated)).toEqual(statsValidatedLinks);

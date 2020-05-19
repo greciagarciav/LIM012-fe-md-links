@@ -1,3 +1,4 @@
+const chalk = require('chalk');
 const fetchMock = require('../__mocks__/node-fetch.js');
 const optionFunctions = require('../lib/api/options');
 
@@ -25,7 +26,7 @@ const arrObjValidated = [
     file: 'C:\\Users\\Estudiante\\Documents\\Laboratoria LIM 012 - Grecia\\Track\\LIM012-fe-md-links\\dir-test2\\subdir-test\\first.md',
     href: 'iamalinkthatdoesnot',
     text: 'this link does not exist',
-    status: '',
+    status: 'error',
     ok: 'link does not exist',
   },
 ];
@@ -44,14 +45,14 @@ describe('Validate status of link of each object of an array', () => {
     }));
 });
 
-const statsLink = 'Total:3 Unique:3';
+const statsLink = `${chalk.cyanBright.bold('Total:')} ${chalk.white.bold('3')} \n${chalk.cyanBright.bold('Unique:')} ${chalk.white.bold('3')}`;
 describe('Get statistis of total and unique links of an ', () => {
   it('should return an array of links from all md files', () => {
     expect(optionFunctions.Stats(arrObjValidated)).toEqual(statsLink);
   });
 });
 
-const statsValidatedLinks = 'Total:3 Unique:3 Broken:2';
+const statsValidatedLinks = `${chalk.cyanBright.bold('Total:')} ${chalk.white.bold('3')} \n${chalk.cyanBright.bold('Unique:')} ${chalk.white.bold('3')} \n${chalk.cyanBright.bold('Broken:')} ${chalk.white.bold('2')}`;
 describe('Get an array of objects', () => {
   it('should return an array of objects where an object represent a link', () => {
     expect(optionFunctions.StatsAndValidate(arrObjValidated)).toEqual(statsValidatedLinks);
