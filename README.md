@@ -64,17 +64,17 @@ El valor de retorno es una promesa (`Promise`) que resuelve un arreglo, donde ca
 
 Importe el módulo vía require
 
-`const mdLinks = require('md-links')`
+`const mdLinks = require('@greciagarciav/md-links');`
 
 Para validación `true` de los links:
 
-```mdLinks.mdLinks('dir-test', { validate: true }).then((data) => console.log(data));```
+```mdLinks.MarkdownLinks('dir-test', { validate: true }).then((data) => console.log(data));```
 
 ![mdLinks validate true](https://user-images.githubusercontent.com/51206642/82465305-bf0ecc00-9a84-11ea-8f8f-04b1149395b1.JPG)
 
 Para validación `false` de los links:
 
-```mdLinks.mdLinks('dir-test', { validate: false }).then((data) => console.log(data));```
+```mdLinks.MarkdownLinks('dir-test', { validate: false }).then((data) => console.log(data));```
 
 ![mdLinks validate false](https://user-images.githubusercontent.com/51206642/82465297-bddd9f00-9a84-11ea-8ccf-7443db2908b6.JPG)
 
