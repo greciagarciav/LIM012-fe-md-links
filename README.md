@@ -10,21 +10,97 @@ Para empezar a crear esta librería tomé en cuenta lo siguiente:
 
 ## Documentación técnica
 
+### API `mdLinks(path, opts)`
 
+- El módulo exporta una función con la interfaz (API) esperada.
+- El módulo implementa soporte para archivo individual
+- El módulo implementa soporte para directorios
+- El módulo implementa `options.validate`
 
-## Guía de uso
+### CLI
 
+- Expone ejecutable `md-links` en el path (configurado en `package.json`)
+- Se ejecuta sin errores / output esperado.
+- El ejecutable implementa `--validate`.
+- El ejecutable implementa `--stats`.
+- El ejecutable implementa `--validate` y `--stats` juntos.
 
+## Guía de uso e Instalación
 
-## Instalación
+### Instalación
+
+Instala la librería desde github
+
+```npm install git+https://github.com/greciagarciav/LIM012-fe-md-links.git```
+
+### Uso
+
+#### API`mdLinks(path, options)`
+
+La función tiene 2 parámetros
+
+- `path`: Ruta absoluta o relativa al archivo o directorio. 
+- `options`: Un objeto con las siguientes propiedades:
+  * `validate`: Booleano que determina si se desea validar los links
+    encontrados.
+
+El valor de retorno es una promesa (`Promise`) que resuelve un arreglo, donde cada objeto representa un link y contiene las siguientes propiedades:
+
+- `href`: URL encontrada.
+- `text`: Texto que aparecía dentro del link.
+- `file`: Ruta del archivo donde se encontró el link.
+
+*** Ejemplo ***
+
+Importe el módulo vía require
+
+`const mdLinks = require('md-links')`
+
+Para validación `true` de los links:
+
+```mdLinks.mdLinks('dir-test', { validate: true }).then((data) => console.log(data));```
+
+![mdLinks validate true](https://user-images.githubusercontent.com/51206642/82465305-bf0ecc00-9a84-11ea-8f8f-04b1149395b1.JPG)
+
+Para validación `false` de los links:
+
+```mdLinks.mdLinks('dir-test', { validate: false }).then((data) => console.log(data));```
+
+![mdLinks validate false](https://user-images.githubusercontent.com/51206642/82465297-bddd9f00-9a84-11ea-8ccf-7443db2908b6.JPG)
+
+#### CLI
+
+*** Uso de comandos***
+
+``` md-links <path-to-file> [options] ```
+
+* `--validate`
+
+![--validate](https://user-images.githubusercontent.com/51206642/82266200-aa202480-992e-11ea-813a-6a8d178460d8.JPG)
+
+* `--stats`
+
+![--stats](https://user-images.githubusercontent.com/51206642/82466552-2f6a1d00-9a86-11ea-8470-8bb1b2e919ab.JPG)
+
+* `--stats` y `--validate` juntos o `--validate` y `--stats`
 
 ![--stats --validate o --validate --stats](https://user-images.githubusercontent.com/51206642/82266011-223a1a80-992e-11ea-84ad-65757f801154.JPG)
-![no valid commands](https://user-images.githubusercontent.com/51206642/82266450-58c46500-992f-11ea-9abc-6e49c33f9dd4.JPG)
-![ruta no válida](https://user-images.githubusercontent.com/51206642/82266068-439b0680-992e-11ea-91cd-50fd63f3f1fa.JPG)
-![--help](https://user-images.githubusercontent.com/51206642/82266074-485fba80-992e-11ea-9424-b9fd20768364.JPG)
-![--stats o --stats --validate](https://user-images.githubusercontent.com/51206642/82266148-84931b00-992e-11ea-89bb-4eb2afaacfed.JPG)
+
+* Ningun opción 
+
 ![no options](https://user-images.githubusercontent.com/51206642/82266189-a391ad00-992e-11ea-94dc-88f6b0eb7fd9.JPG)
-![--validate](https://user-images.githubusercontent.com/51206642/82266200-aa202480-992e-11ea-813a-6a8d178460d8.JPG)
+
+* Comandos no validos
+
+![no valid commands](https://user-images.githubusercontent.com/51206642/82266450-58c46500-992f-11ea-9abc-6e49c33f9dd4.JPG)
+
+* Comandos no validos
+
+![ruta no válida](https://user-images.githubusercontent.com/51206642/82266068-439b0680-992e-11ea-91cd-50fd63f3f1fa.JPG)
+
+* Para ayuda e información `md-links --help`
+
+![--help](https://user-images.githubusercontent.com/51206642/82266074-485fba80-992e-11ea-9424-b9fd20768364.JPG)
 
 # Markdown Links
 
@@ -158,9 +234,7 @@ siguiente interfaz:
 
 ##### Argumentos
 
-- `path`: Ruta absoluta o relativa al archivo o directorio. Si la ruta pasada es
-  relativa, debe resolverse como relativa al directorio desde donde se invoca
-  node - _current working directory_).
+- `path`: Ruta absoluta o relativa al archivo o directorio. 
 - `options`: Un objeto con las siguientes propiedades:
   * `validate`: Booleano que determina si se desea validar los links
     encontrados.
