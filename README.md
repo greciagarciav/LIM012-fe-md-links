@@ -50,7 +50,7 @@ El valor de retorno es una promesa (`Promise`) que resuelve un arreglo, donde ca
 - `text`: Texto que aparecía dentro del link.
 - `file`: Ruta del archivo donde se encontró el link.
 
-*** Ejemplo ***
+##### Ejemplo
 
 Importe el módulo vía require
 
@@ -70,7 +70,7 @@ Para validación `false` de los links:
 
 #### CLI
 
-*** Uso de comandos***
+##### Uso de comandos 
 
 ``` md-links <path-to-file> [options] ```
 
@@ -86,15 +86,15 @@ Para validación `false` de los links:
 
 ![--stats --validate o --validate --stats](https://user-images.githubusercontent.com/51206642/82266011-223a1a80-992e-11ea-84ad-65757f801154.JPG)
 
-* Ningun opción 
+* Cuando solo ingresas la ruta sin opciones 
 
 ![no options](https://user-images.githubusercontent.com/51206642/82266189-a391ad00-992e-11ea-94dc-88f6b0eb7fd9.JPG)
 
-* Comandos no validos
+* Cuando escribes comandos no validos
 
 ![no valid commands](https://user-images.githubusercontent.com/51206642/82266450-58c46500-992f-11ea-9abc-6e49c33f9dd4.JPG)
 
-* Comandos no validos
+* Ruta no válida 
 
 ![ruta no válida](https://user-images.githubusercontent.com/51206642/82266068-439b0680-992e-11ea-91cd-50fd63f3f1fa.JPG)
 
