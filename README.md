@@ -1,6 +1,6 @@
-![md-links](https://user-images.githubusercontent.com/51206642/82133217-de6cd700-97ae-11ea-8086-059b1156ad19.JPG)
+<div style="align: center">![md-links](https://user-images.githubusercontent.com/51206642/82133217-de6cd700-97ae-11ea-8086-059b1156ad19.JPG)</div>
 
-![Build Status](https://img.shields.io/badge/nodeJs-100%25-blue) ![Coverage Status](https://img.shields.io/badge/coverage-100%25-green) ![npm dependents](https://img.shields.io/badge/dependencias-3-pink) ![version](https://img.shields.io/badge/version-1.00-orange) ![milestones](https://img.shields.io/badge/milestones-4-yellowgreen) ![issues](https://img.shields.io/badge/issues-16%20closed-ff69b4)
+<div style="align: center">![Build Status](https://img.shields.io/badge/nodeJs-100%25-blue) ![Coverage Status](https://img.shields.io/badge/coverage-100%25-green) ![npm dependents](https://img.shields.io/badge/dependencias-3-pink) ![version](https://img.shields.io/badge/version-1.00-orange) ![milestones](https://img.shields.io/badge/milestones-4-yellowgreen) ![issues](https://img.shields.io/badge/issues-16%20closed-ff69b4)</div>
 
 md-links es una librería que valida links y obtiene estadísticas de todos los archivos markdown .md de una ruta específica. Esta implementada en Javascript y se ejecuta con Node.js.
 
