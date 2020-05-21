@@ -41,7 +41,7 @@ Para empezar a crear esta librería tomé en cuenta lo siguiente:
 
 Instala la librería desde github
 
-```npm install git+https://github.com/greciagarciav/LIM012-fe-md-links.git```
+```npm install greciagarciav/LIM012-fe-md-links```
 
 ### Uso
 
