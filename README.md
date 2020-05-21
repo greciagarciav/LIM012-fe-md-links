@@ -39,9 +39,13 @@ Para empezar a crear esta librería tomé en cuenta lo siguiente:
 
 ### Instalación
 
-Instala la librería desde github
+##### Instala la librería localmente desde github
 
 ```npm install greciagarciav/LIM012-fe-md-links```
+
+##### Instala la librería globalmente desde github
+
+```npm install --global greciagarciav/LIM012-fe-md-links```
 
 ### Uso
 
